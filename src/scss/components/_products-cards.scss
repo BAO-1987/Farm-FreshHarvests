@@ -1,0 +1,68 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+.products-cards {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: calc(var(--radius-main) * 3);
+  height: 100%;
+  box-shadow: 0 35px 133px 0 rgba(113, 144, 190, 0.08);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 6px 24px 24px;
+    height: 100%;
+    background-color: var(--color-grey-10);
+    backdrop-filter: blur(40px);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 22px;
+    width: 100%;
+    max-width: 275px;
+    font-weight: var(--fw-400);
+    font-size: clamp(20px, 1rem + 1.1111vi, 32px);
+    line-height: 1.25;
+  }
+
+  ul {
+    margin-bottom: 18px;
+    padding-left: 28px;
+
+    li {
+      list-style-type: disc;
+      font-size: clamp(16px, 1.0833rem + 0.1852vi, 20px);
+      letter-spacing: 0.02em;
+
+      &::marker {
+        width: 5px;
+        height: 5px;
+        color: var(--color-black);
+      }
+    }
+  }
+
+  .btn {
+    margin-top: auto;
+  }
+
+  @include media(tablet) {
+    h2 {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__content {
+      align-items: center;
+      padding: 16px;
+    }
+  }
+}

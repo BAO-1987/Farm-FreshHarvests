@@ -1,0 +1,14 @@
+@use "sass:math";
+
+$browser-context: 16;
+$percent: 100%;
+$myFullHD: 1920;
+$myVW: 14.4;
+
+@function rem($pixels, $context: $browser-context) {
+  @return calc($pixels / $context) * 1rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return calc($pixels / $context) * 1em;
+}

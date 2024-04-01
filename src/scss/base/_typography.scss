@@ -1,0 +1,33 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+h1,
+h2,
+h3 {
+  overflow: hidden;
+  margin-bottom: 32px;
+  font-weight: var(--fw-500);
+  font-size: clamp(35px, 1.4583rem + 3.2407vi, 70px);
+  line-height: 1.1;
+  color: var(--color-green-900);
+
+  span {
+    color: var(--color-green-400);
+  }
+}
+
+h3 {
+  font-size: clamp(18px, 1.0833rem + 0.7407vi, 18px);
+  line-height: 1;
+}
+
+.subtext,
+p {
+  font-family: var(--font-family-secondary);
+  font-size: 18px;
+}
+
+.subtext {
+  font-weight: var(--fw-400);
+}
+

@@ -1,0 +1,67 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+.policy {
+  letter-spacing: 0.02em;
+
+  &__content {
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+    }
+  }
+
+  h1 {
+    margin-bottom: rem(60);
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    font-size: clamp(18px, 0.875rem + 1.1111vi, 30px);
+    line-height: 1.33;
+  }
+
+  ul {
+    margin-bottom: 20px;
+    padding-left: 15px;
+  }
+
+  li {
+    padding-left: 10px;
+    letter-spacing: 0.02em;
+
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+
+    &::marker {
+      content: "✓";
+      color: var(--color-green-900);
+    }
+  }
+
+  p {
+    line-height: 1.2;
+    opacity: 1;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--color-green-900);
+  }
+
+  @include media(mobile-l) {
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    &__content {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

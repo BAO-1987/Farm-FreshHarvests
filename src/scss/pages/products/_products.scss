@@ -1,0 +1,45 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.products {
+  margin-bottom: rem(55);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: rem(52);
+    gap: 24px;
+  }
+
+  @include media(tablet) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        &:last-child {
+          grid-column: 2 span;
+          margin: 0 auto;
+          max-width: 450px;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+
+      li {
+        img {
+          aspect-ratio: 12/9;
+        }
+
+        &:last-child {
+          grid-column: auto;
+          margin: 0;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

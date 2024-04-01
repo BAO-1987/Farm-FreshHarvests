@@ -1,0 +1,31 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --content-width: 1244px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // font-family
+  --font-family-primary: "Noto Sans Display", sans-serif;
+  --font-family-secondary: "Crimson Pro", sans-serif;
+
+  // font-weight
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+
+  //
+  --color-white: #fff;
+  --color-black: #000;
+  --color-green-400:#2FB945;
+  --color-green-900: #043A2A;
+
+  //  radius
+  --radius-main: 8px;
+}

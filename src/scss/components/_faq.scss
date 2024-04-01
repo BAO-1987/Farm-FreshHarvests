@@ -1,0 +1,75 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.faq {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 21px;
+    }
+  }
+
+  details {
+    overflow: hidden;
+    border: 2px solid var(--color-green-900);
+    border-radius: calc((var(--radius-main)) * 3);
+
+    &[open] {
+      border-color: var(--color-green-400);
+
+      summary {
+        &::after {
+          background-color: var(--color-green-400);
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+
+  summary {
+    position: relative;
+    padding: 24px 56px 24px 32px;
+    font-weight: var(--fw-500);
+    font-size: clamp(22px, 1rem + 0.5556vi, 24px);
+    line-height: 1.25;
+    cursor: pointer;
+
+    &::after {
+      @include mask;
+
+      right: 24px;
+      top: 24px;
+      mask-image: url("../images/icons/chevron-down.svg");
+      width: 32px;
+      height: 32px;
+      background-color: var(--color-green-900);
+      transform: scaleY(-1);
+      transition: transform 0.3s linear;
+    }
+
+    + div {
+      padding: 0 32px 24px;
+
+      p {
+        width: 98%;
+
+        @include media(mobile-l) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: rem(60);
+  }
+
+  @include media(mobile-l) {
+    summary {
+      padding: 24px 32px;
+
+      &::after {
+        right: 5px;
+      }
+    }
+  }
+}

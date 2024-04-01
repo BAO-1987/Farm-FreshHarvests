@@ -1,0 +1,113 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+.news {
+  margin-bottom: 35px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    &--offerings {
+      counter-reset: offerings-counter;
+
+      .cards__content {
+        counter-increment: offerings-counter;
+
+        &::before {
+          content: counter(offerings-counter, decimal);
+          position: absolute;
+          left: 24px;
+          top: 27px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          font-weight: var(--fw-700);
+          font-size: 20px;
+          line-height: 2;
+          color: var(--color-white);
+          background-color: var(--color-green-900);
+        }
+
+        @include media(mobile-l) {
+          &::before {
+            top: 24px;
+          }
+        }
+      }
+
+      h3 {
+        position: relative;
+        padding-left: rem(51);
+        width: 100%;
+        max-width: 235px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &--home {
+    .title {
+      margin-bottom: 33px;
+    }
+
+    .cards__content {
+      h3 {
+        position: relative;
+        font-size: clamp(18px, 0.9167rem + 0.9259vi, 28px);
+      }
+    }
+  }
+
+  @include media(tablet) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        &:last-child {
+          grid-column: 2 span;
+          margin: 0 auto;
+          max-width: 450px;
+        }
+      }
+
+      h3 {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+
+      li {
+        img {
+          aspect-ratio: 18/9;
+        }
+
+        &:last-child {
+          grid-column: auto;
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__content {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}

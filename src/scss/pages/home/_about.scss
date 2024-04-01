@@ -1,0 +1,41 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.about {
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding-right: max(16px, calc((100% - 1216px) / 2));
+  }
+
+  &__image {
+    flex-shrink: 0;
+    margin-right: rem(127);
+    width: calc(100% - 620px);
+  }
+
+  &__content {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 493px;
+    translate: 0 12px;
+  }
+
+  .subtitle {
+    margin-bottom: rem(40);
+    line-height: 1.26;
+  }
+
+  @include media(tablet) {
+    &__inner {
+      flex-direction: column-reverse;
+      padding: 0 16px;
+      gap: 24px;
+    }
+
+    &__image {
+      margin-right: 0;
+      width: fit-content;
+    }
+  }
+}

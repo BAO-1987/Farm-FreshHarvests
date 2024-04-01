@@ -1,0 +1,100 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+html,
+body {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+.page {
+  height: var(--vh);
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-300);
+  font-style: normal;
+  font-size: clamp(16px, 1vw, 20px);
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: var(--color-green-900);
+  background-color: var(--color-white);
+  font-optical-sizing: auto;
+  // scroll-padding: calc(var(--header-height) + 60px);
+
+  &__body {
+    min-width: 320px;
+    min-height: var(--vh);
+  }
+
+  &.open {
+    overflow: hidden;
+  }
+}
+
+.section {
+  margin-bottom: rem(60);
+
+  @include media(tablet) {
+    margin-bottom: 40px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  min-height: var(--vh);
+}
+
+.main {
+  &--section {
+    padding-top: calc(var(--header-height) + 89px);
+
+    @include media(tablet) {
+      padding-top: calc(var(--header-height) + 49px);
+    }
+  }
+}
+
+.logo {
+  margin-right: rem(43);
+  width: 100%;
+  max-width: 275px;
+
+  @include media(tablet-wide) {
+    max-width: 230px;
+  }
+}
+
+.is-scrolling {
+  overflow-y: scroll;
+  scrollbar-color: var(--color-green-900) var(--color-white);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-green-900);
+  }
+
+  @include media(tablet) {
+    padding-bottom: 16px;
+  }
+}

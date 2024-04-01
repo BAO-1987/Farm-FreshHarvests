@@ -1,0 +1,80 @@
+<header class="header">
+
+  <div class="container">
+
+      <nav class="nav">
+
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="./images/logo.svg" alt="logo of Farm Fresh Harvests" width="261" height="48" loading="lazy">
+        </a>
+
+        <button class="burger" aria-label="Mobile menu" type="button">
+          <span></span>
+        </button>
+
+        <div class="nav__inner">
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link {{ page === 'home' }}">
+                Home
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link {{ page === 'about' }}" href="#">
+              About
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link {{ page === 'products' }}" href="#">
+                Product Catalog
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link {{ page === 'initiatives' }}" href="#">
+                Initiatives
+              </a>
+            </li>
+
+          </ul>
+
+          <div class="nav__btns">
+            <a class="nav__link nav__link--sing" href="sign-up.html">
+              Sign Up
+            </a>
+
+            <button class="btn btn--request" type="button" formsappId="">
+              Add Your Farm
+            </button>
+          </div>
+
+        </div>
+
+      </nav>
+    </div>
+
+</header>
+
+<script>
+  const startHeightValue = () => {
+    let vh = window.innerHeight * 1;
+    document.querySelector(':root').style.setProperty('--vh', `${vh}px`);
+
+    const pageHeader = document.querySelector('.header')
+
+    const headerHeight = pageHeader ? pageHeader.offsetHeight : 0;
+
+    document.documentElement.style.setProperty(
+      '--header-height',
+      `${headerHeight}px`
+    );
+  }
+
+  window.addEventListener('resize', startHeightValue);
+  window.addEventListener('scroll', startHeightValue);
+
+  startHeightValue();
+</script>

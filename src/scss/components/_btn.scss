@@ -1,0 +1,83 @@
+/* stylelint-disable declaration-no-important */
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+*[class].btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 82px;
+  padding: 16px 32px;
+  width: 100%;
+  height: max-content;
+  max-width: fit-content;
+  font-weight: var(--fw-400);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-grey-20);
+  background: var(--gradient-green);
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    background: var(--gradient-green-hover);
+  }
+
+  &.formsapp-button {
+    font-family: var(--font-family-primary) !important;
+  }
+
+  &--request {
+    margin: 0 !important;
+    color: var(--color-grey-10) !important;
+  }
+
+  &--small {
+    border: 1px solid var(--color-green-100);
+    border-radius: 40px;
+    padding: 11px 31px;
+    font-size: 20px;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: var(--color-dark-900);
+    background: var(--color-green-50);
+
+    &:hover,
+    &:focus {
+      color: var(--color-grey-10);
+      background: var(--color-green-900);
+    }
+  }
+
+  &--arrow {
+    padding: 12px 12px 12px 32px;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--color-grey-10);
+    gap: 24px;
+
+    &::after {
+      content: "";
+      position: relative;
+      width: 32px;
+      height: 32px;
+      background-image: url("../images/icons/arrow-right.svg");
+      background-position: 0 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.btn-reset {
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  font-family: var(--font-family-primary) !important;
+  font-weight: var(--fw-400) !important;
+  font-size: clamp(18px, 1rem + 0.5556vi, 24px) !important;
+  line-height: 1.25 !important;
+  color: var(--color-green-900) !important;
+  background-color: transparent !important;
+}

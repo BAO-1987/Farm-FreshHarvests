@@ -1,0 +1,34 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.tabs {
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(60);
+    gap: 21px;
+
+    &--products {
+      margin-bottom: rem(83);
+    }
+  }
+
+  .btn {
+    &.selected {
+      color: var(--color-white);
+      background: var(--gradient-green);
+    }
+  }
+
+  @include media(tablet) {
+    &__nav {
+      margin-bottom: 35px;
+    }
+
+    @include media(mobile-l) {
+      &__nav {
+        gap: 16px;
+      }
+    }
+  }
+}

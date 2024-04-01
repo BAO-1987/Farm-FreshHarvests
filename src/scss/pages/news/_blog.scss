@@ -1,0 +1,32 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.blog {
+  margin-bottom: rem(60);
+
+  &__list {
+    li {
+      &:not(:last-child) {
+        margin-bottom: rem(60);
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: rem(63);
+  }
+
+  @include media(mobile-l) {
+    margin-bottom: 30px;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .title {
+      margin-bottom: 35px;
+    }
+  }
+}

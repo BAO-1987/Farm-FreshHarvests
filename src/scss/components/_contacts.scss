@@ -1,0 +1,124 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.contacts {
+  margin-bottom: rem(60);
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) * 3);
+  }
+
+  &__inner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--color-grey-10);
+    border-radius: calc(var(--radius-main) * 3);
+    padding: 24px;
+    width: 100%;
+    max-width: 596px;
+    box-shadow: 106px -86px 100px 0 rgba(39, 113, 160, 0.14);
+    color: var(--color-grey-400);
+    background: linear-gradient(90deg, rgba(254, 254, 254, 0.7) 0%, rgba(218, 246, 202, 0.7) 100%);
+    backdrop-filter: blur(66px);
+    gap: 24px;
+  }
+
+  &__form {
+    width: 100%;
+    box-shadow: 0 4px 100px 0 rgba(7, 86, 199, 0.08);
+
+    label {
+      display: block;
+      text-align: left;
+
+      &:last-of-type {
+        margin-bottom: 24px;
+      }
+    }
+
+    textarea,
+    input {
+      border-color: transparent;
+      border-radius: 8px;
+      padding: 14px 30px 14px 24px;
+      width: 100%;
+      background-color: var(--color-grey-10);
+
+      &::placeholder {
+        font-size: 20px;
+        line-height: 1.25;
+      }
+    }
+
+    textarea {
+      padding: 24px;
+      min-height: 148px;
+      resize: none;
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 22px;
+    gap: 24px;
+
+    label:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  h1 {
+    margin-bottom: 12px;
+    font-size: clamp(24px, 1.25rem + 1.1111vi, 36px);
+    color: var(--color-dark-900);
+  }
+
+  p {
+    margin-bottom: 19px;
+  }
+
+  @include media(tablet-wide) {
+    &__image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    &__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+      translate: 0;
+    }
+
+    @include media(mobile-m) {
+      &__inner {
+        padding: 16px;
+      }
+
+      &__box {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        max-width: 100%;
+      }
+    }
+  }
+}
