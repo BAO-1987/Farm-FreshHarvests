@@ -6,12 +6,14 @@ h2,
 h3 {
   overflow: hidden;
   margin-bottom: 32px;
+  font-family: var(--font-family-secondary);
   font-weight: var(--fw-500);
   font-size: clamp(35px, 1.4583rem + 3.2407vi, 70px);
   line-height: 1.1;
   color: var(--color-green-900);
 
   span {
+    display: block;
     color: var(--color-green-400);
   }
 }
@@ -23,7 +25,6 @@ h3 {
 
 .subtext,
 p {
-  font-family: var(--font-family-secondary);
   font-size: 18px;
 }
 

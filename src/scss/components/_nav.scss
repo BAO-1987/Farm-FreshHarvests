@@ -24,7 +24,7 @@
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: 28px;
+      margin-right: 33px;
 
       @include media(tablet-wide) {
         margin-right: 15px;
@@ -37,9 +37,11 @@
   }
 
   &__link {
+    color: var(--color-white);
+    font-family: var(--font-family-secondary);
     font-size: var(--fw-400);
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.33;
     transition: color 0.3s linear;
 
     &--sing {
@@ -51,23 +53,16 @@
     }
 
     &.true {
-      padding: 12px 19px;
-      border-radius: 82px;
-      background: var(--gradient-green);
-      color: var(--color-white);
+      color: var(--color-green-400);
     }
   }
 
   &__btns {
     display: flex;
     align-items: center;
-    gap: 23px;
+    gap:14px;
   }
 
-  &__block {
-    width: 100%;
-    max-width: 316px;
-  }
 
   &--footer {
     align-items: flex-start;

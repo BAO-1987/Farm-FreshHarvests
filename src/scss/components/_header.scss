@@ -3,9 +3,11 @@
 
 .header {
   position: fixed;
-  top: 30px;
+  top: 0;
   z-index: 10;
+  padding: 31px 0;
   width: 100%;
+  background-color: var(--color-green-900);
 
   transition-property: transform;
   transition-duration: 0.15s;
@@ -20,7 +22,6 @@
   &.hide {
     transform: translateY(-200%);
   }
-
 
   @include media(tablet) {
     top: 15px;

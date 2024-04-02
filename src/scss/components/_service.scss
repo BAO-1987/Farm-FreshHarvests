@@ -1,63 +1,63 @@
-@use "../utils/functions/" as *;
-@use "../utils/mixins/" as *;
+// @use "../utils/functions/" as *;
+// @use "../utils/mixins/" as *;
 
-.service {
-  padding: rem(60) 0;
+// .service {
+//   padding: rem(60) 0;
 
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
+//   &__inner {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     gap: 24px;
+//   }
 
-  &__content {
-    width: 100%;
-    max-width: 493px;
-  }
+//   &__content {
+//     width: 100%;
+//     max-width: 493px;
+//   }
 
-  &__image {
-    width: 100%;
-    max-width: 616px;
+//   &__image {
+//     width: 100%;
+//     max-width: 616px;
 
-    img {
-      width: 100%;
-    }
-  }
+//     img {
+//       width: 100%;
+//     }
+//   }
 
-  .link {
-    margin-bottom: rem(40);
-  }
+//   .link {
+//     margin-bottom: rem(40);
+//   }
 
-  &--main {
-    margin-bottom: rem(41);
-    padding: rem(80) 0;
+//   &--main {
+//     margin-bottom: rem(41);
+//     padding: rem(80) 0;
 
-    .title {
-      margin-bottom: rem(42);
-    }
-  }
+//     .title {
+//       margin-bottom: rem(42);
+//     }
+//   }
 
-  @include media(tablet) {
-    padding: 30px 0;
+//   @include media(tablet) {
+//     padding: 30px 0;
 
-    &--main {
-      margin-bottom: 0;
-      padding: 35px 0;
+//     &--main {
+//       margin-bottom: 0;
+//       padding: 35px 0;
 
-      .title {
-        margin-bottom: 20px;
-      }
-    }
-  }
+//       .title {
+//         margin-bottom: 20px;
+//       }
+//     }
+//   }
 
-  @include media(mobile-l) {
-    &__inner {
-      flex-direction: column;
-    }
+//   @include media(mobile-l) {
+//     &__inner {
+//       flex-direction: column;
+//     }
 
-    &__content {
-      max-width: 100%;
-    }
-  }
-}
+//     &__content {
+//       max-width: 100%;
+//     }
+//   }
+// }

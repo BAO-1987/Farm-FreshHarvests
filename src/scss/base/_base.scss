@@ -10,7 +10,7 @@ body {
 .page {
   height: var(--vh);
   font-family: var(--font-family-primary);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   font-style: normal;
   font-size: clamp(16px, 1vw, 20px);
   line-height: 1.6;
@@ -31,10 +31,10 @@ body {
 }
 
 .section {
-  margin-bottom: rem(60);
+  padding: rem(86) 0;
 
   @include media(tablet) {
-    margin-bottom: 40px;
+     padding: rem(40) 0;
   }
 }
 
@@ -53,23 +53,17 @@ body {
 }
 
 .main {
-  &--section {
-    padding-top: calc(var(--header-height) + 89px);
-
-    @include media(tablet) {
-      padding-top: calc(var(--header-height) + 49px);
-    }
-  }
+    padding-top: var(--header-height);
 }
 
 .logo {
-  margin-right: rem(43);
+  margin-right: rem(68);
   width: 100%;
-  max-width: 275px;
+  max-width: 261px;
 
-  @include media(tablet-wide) {
-    max-width: 230px;
-  }
+  // @include media(tablet-wide) {
+  //   max-width: 230px;
+  // }
 }
 
 .is-scrolling {
