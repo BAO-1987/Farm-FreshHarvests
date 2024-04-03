@@ -2,13 +2,27 @@
 @use "../utils/mixins/" as *;
 
 .contacts {
-  margin-bottom: rem(60);
-
   &__wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 106px;
+    min-height: 500px;
+    border-radius: calc(var(--radius-main) * 8);
+    background-color: var(--color-green-900);
   }
 
-  &__image {
+  &__content {
+    width: 100%;
+    max-width: 715px;
+  }
+
+  img {
+    position: absolute;
+    pointer-events: none;
+    bottom: 0;
+    right: -91px;
     overflow: hidden;
     border-radius: calc(var(--radius-main) * 3);
   }
@@ -30,95 +44,33 @@
   }
 
   &__form {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    box-shadow: 0 4px 100px 0 rgba(7, 86, 199, 0.08);
-
-    label {
-      display: block;
-      text-align: left;
-
-      &:last-of-type {
-        margin-bottom: 24px;
-      }
-    }
-
-    textarea,
-    input {
-      border-color: transparent;
-      border-radius: 8px;
-      padding: 14px 30px 14px 24px;
-      width: 100%;
-      background-color: var(--color-grey-10);
-
-      &::placeholder {
-        font-size: 20px;
-        line-height: 1.25;
-      }
-    }
-
-    textarea {
-      padding: 24px;
-      min-height: 148px;
-      resize: none;
-    }
-  }
-
-  &__box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 22px;
+    max-width: 612px;
     gap: 24px;
 
-    label:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  h1 {
-    margin-bottom: 12px;
-    font-size: clamp(24px, 1.25rem + 1.1111vi, 36px);
-    color: var(--color-dark-900);
-  }
-
-  p {
-    margin-bottom: 19px;
-  }
-
-  @include media(tablet-wide) {
-    &__image {
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  @include media(mobile-l) {
-    &__wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
+    label {
+      width: 100%;
     }
 
-    &__inner {
-      position: relative;
-      z-index: 1;
+    input {
+      border-radius: 16px;
+      padding: 16 24px;
+      width: 100%;
       max-width: 100%;
-      translate: 0;
-    }
+      background-color: rgba(255, 255, 255, 0.08);
+      color: var(--color-white);
 
-    @include media(mobile-m) {
-      &__inner {
-        padding: 16px;
-      }
-
-      &__box {
-        grid-template-columns: 1fr;
-      }
-
-      .btn {
-        max-width: 100%;
+      &::placeholder {
+        line-height: 1.33;
+        color: var(--color-white);
       }
     }
+  }
+
+  h2 {
+    color: var(--color-white);
+    margin-bottom: 48px;
   }
 }

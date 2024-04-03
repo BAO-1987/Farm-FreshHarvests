@@ -1,0 +1,31 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.initiatives {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    &:not(:last-child) {
+      padding-bottom: rem(86);
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+      padding-top: rem(86);
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 610px;
+
+    p {
+      &:first-of-type {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

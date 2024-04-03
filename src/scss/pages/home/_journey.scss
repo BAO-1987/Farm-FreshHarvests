@@ -1,0 +1,21 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.journey {
+  &__content {
+    margin: 0 auto rem(48);
+    width: 100%;
+    max-width: 745px;
+    text-align: center;
+  }
+
+  &__image {
+    overflow: hidden;
+    margin-bottom: rem(48);
+    border-radius: calc(var(--radius-main) * 8);
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+}

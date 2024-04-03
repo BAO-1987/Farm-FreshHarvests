@@ -30,12 +30,17 @@ body {
   }
 }
 
-.section {
+.section,
+.background {
   padding: rem(86) 0;
 
   @include media(tablet) {
      padding: rem(40) 0;
   }
+}
+
+.background {
+  background-color: var(--color-grey-10);
 }
 
 .container {

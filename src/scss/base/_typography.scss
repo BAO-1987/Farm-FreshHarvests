@@ -13,9 +13,13 @@ h3 {
   color: var(--color-green-900);
 
   span {
-    display: block;
+    display: inline-block;
     color: var(--color-green-400);
   }
+}
+
+h2 {
+  margin-bottom: 24px;
 }
 
 h3 {
@@ -26,9 +30,9 @@ h3 {
 .subtext,
 p {
   font-size: 18px;
+  letter-spacing: 0.025em;
 }
 
 .subtext {
   font-weight: var(--fw-400);
 }
-

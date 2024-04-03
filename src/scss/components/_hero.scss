@@ -2,6 +2,8 @@
 @use "../utils/mixins/" as *;
 
 .hero {
+  $root: &;
+
   &__inner {
     display: flex;
     align-items: center;
@@ -9,8 +11,17 @@
   }
 
   &__image {
-    flex-shrink: 0;
+    position: relative;
+    // flex-shrink: 0;
     width: calc(100% - 610px);
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   z-index: 1;
+    //   background: var(--gradient-green);
+    //   inset: 0;
+    // }
   }
 
   &__content {
@@ -23,18 +34,14 @@
     }
   }
 
-
-
-  @include media(tablet) {
-    &__inner {
-      flex-direction: column-reverse;
-      padding: 0 16px;
-      gap: 24px;
+  &--reverse {
+    #{$root}__inner {
+      padding-right: 0;
+      padding-left: max(16px, calc((100% - 1440px) / 2));
     }
 
-    &__image {
-      margin-right: 0;
-      width: fit-content;
+    #{$root}__content {
+      margin-right: 130px;
     }
   }
 }

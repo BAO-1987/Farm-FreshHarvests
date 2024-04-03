@@ -42,6 +42,7 @@
     font-size: var(--fw-400);
     font-size: 18px;
     line-height: 1.33;
+    background-color: transparent;
     transition: color 0.3s linear;
 
     &--sing {
@@ -60,51 +61,19 @@
   &__btns {
     display: flex;
     align-items: center;
-    gap:14px;
+    gap: 14px;
   }
 
-
   &--footer {
-    align-items: flex-start;
-
-    .logo {
-      display: block;
-      margin-right: 20px;
-      margin-bottom: 20px;
-    }
-
-    @include media(tablet) {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 24px;
-
-      .logo {
-        margin-inline: auto;
-      }
-    }
-
+    margin-bottom: 28px;
     #{$root}__list {
-      @include media(tablet) {
-        margin: 0;
-      }
-
-      @include media(mobile-s) {
-        flex-direction: column;
-      }
+      margin: 0;
     }
 
     #{$root}__item {
       @include media(mobile-s) {
         margin: 0 0 16px 0;
       }
-    }
-  }
-
-  @include media(tablet) {
-    &__block {
-      max-width: 100%;
-      text-align: center;
     }
   }
 }
