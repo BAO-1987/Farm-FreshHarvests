@@ -16,195 +16,199 @@
 
     </div>
 
-    <ul class="filter__nav is-scrolling">
-      <li>
-        <button class="btn btn--filter active" type="button" data-filter="all">
-          All Products
-        </button>
-      </li>
+    <div class="filter__wrapper">
 
-      <li>
-        <button class="btn btn--filter" type="button" data-filter="fresh">
-          Fresh Produce
-        </button>
-      </li>
+      <ul class="filter__nav is-scrolling">
+        <li>
+          <button class="btn btn--filter active" type="button" data-filter="all">
+            All Products
+          </button>
+        </li>
 
-      <li>
-        <button class="btn btn--filter" type="button" data-filter="dairy">
-          Dairy & Eggs
-        </button>
-      </li>
+        <li>
+          <button class="btn btn--filter" type="button" data-filter="fresh">
+            Fresh Produce
+          </button>
+        </li>
 
-      <li>
-        <button class="btn btn--filter" type="button" data-filter="pantry">
-          Pantry Staples
-        </button>
-      </li>
+        <li>
+          <button class="btn btn--filter" type="button" data-filter="dairy">
+            Dairy & Eggs
+          </button>
+        </li>
 
-      <li>
-        <button class="btn btn--filter" type="button" data-filter="beverages">
-          Beverages
-        </button>
-      </li>
+        <li>
+          <button class="btn btn--filter" type="button" data-filter="pantry">
+            Pantry Staples
+          </button>
+        </li>
 
-      <li>
-        <button class="btn btn--filter" type="button" data-filter="sweet">
-          Sweet Treats
-        </button>
-      </li>
+        <li>
+          <button class="btn btn--filter" type="button" data-filter="beverages">
+            Beverages
+          </button>
+        </li>
 
-      <li>
-        <button class="btn btn--filter" type="button" data-filter="health">
-          Health & Wellness
-        </button>
-      </li>
+        <li>
+          <button class="btn btn--filter" type="button" data-filter="sweet">
+            Sweet Treats
+          </button>
+        </li>
 
-      <li>
-        <button class="btn btn--filter" type="button" data-filter="seasonal">
-          Seasonal Picks
-        </button>
-      </li>
-    </ul>
+        <li>
+          <button class="btn btn--filter" type="button" data-filter="health">
+            Health & Wellness
+          </button>
+        </li>
 
-    <div class="filter__grid">
-      <div class="filter__content" data-category="fresh">
-        <include src="./html/_simple-article.html" locals='{
+        <li>
+          <button class="btn btn--filter" type="button" data-filter="seasonal">
+            Seasonal Picks
+          </button>
+        </li>
+      </ul>
+
+      <div class="filter__grid">
+        <div class="filter__content" data-category="fresh">
+          <include src="./html/_simple-article.html" locals='{
         "images": "kale",
         "title": "Organic Kale Bunches",
         "desc": "Organic Kale Bunches",
         "text": "Nutrient-dense, vibrant greens perfect for healthy meals.",
         "link": "organic_kale.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="fresh">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="fresh">
+          <include src="./html/_simple-article.html" locals='{
         "images": "tomatoes",
         "title": "Juicy Heirloom Tomatoes",
         "desc": "Juicy Heirloom Tomatoes",
         "text": "Richly flavorful, sun-ripened, perfect for any culinary dish.",
         "link": "juicy_tomatoes.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="dairy">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="dairy">
+          <include src="./html/_simple-article.html" locals='{
         "images": "butter",
         "title": "Creamy Farmhouse Butter",
         "desc": "Creamy Farmhouse Butter",
         "text": "Pure, rich taste from grass-fed cows, churned to perfection.",
         "link": "creamy_butter.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="dairy">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="dairy">
+          <include src="./html/_simple-article.html" locals='{
         "images": "eggs",
         "title": "Omega-Rich Free-Range Eggs",
         "desc": "Omega-Rich Free-Range Eggs",
         "text": "Delicious, nutrient-rich eggs from happily free-roaming chickens.",
         "link": "range_eggs.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="pantry">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="pantry">
+          <include src="./html/_simple-article.html" locals='{
         "images": "wheat",
         "title": "Stone-Ground Whole Wheat Flour",
         "desc": "Stone-Ground Whole Wheat Flour",
         "text": "Perfect for wholesome, rustic baking experiences.",
         "link": "wheat_flour.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="pantry">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="pantry">
+          <include src="./html/_simple-article.html" locals='{
         "images": "almond_butter",
         "title": "Raw Almond Butter",
         "desc": "Raw Almond Butter",
         "text": "Smooth, naturally delicious with a creamy, rich texture.",
         "link": "almoed_butter.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="beverages">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="beverages">
+          <include src="./html/_simple-article.html" locals='{
         "images": "coffee",
         "title": "Cold Brew Coffee Concentrate",
         "desc": "Cold Brew Coffee Concentrate",
         "text": "Smooth, richly flavored, sustainably sourced for perfection.",
         "link": "coffee.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="beverages">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="beverages">
+          <include src="./html/_simple-article.html" locals='{
         "images": "tea",
         "title": "Organic Green Tea",
         "desc": "Organic Green Tea",
         "text": "Refreshing, antioxidant-rich with a gentle, soothing aroma.",
         "link": "green_tea.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="sweet">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="sweet">
+          <include src="./html/_simple-article.html" locals='{
         "images": "chocolate",
         "title": "Dark Chocolate Quinoa Bars",
         "desc": "Dark Chocolate Quinoa Bars",
         "text": "Deliciously crunchy, bittersweet with a cocoa-rich hit.",
         "link": "dark_chocolate.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="sweet">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="sweet">
+          <include src="./html/_simple-article.html" locals='{
         "images": "honey",
         "title": "Wildflower Honey",
         "desc": "Wildflower Honey",
         "text": "Naturally sweet, floral notes, harvested with care.",
         "link": "honey.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="health">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="health">
+          <include src="./html/_simple-article.html" locals='{
         "images": "spirulina",
         "title": "Spirulina Powder",
         "desc": "Spirulina Powder",
         "text": "A protein-packed superfood for an energizing boost.",
         "link": "spirulina_powder.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="health">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="health">
+          <include src="./html/_simple-article.html" locals='{
         "images": "oil",
         "title": "CBD Oil Drops",
         "desc": "CBD Oil Drops",
         "text": "Crafted for natural calmness and wellness, pure and organic.",
         "link": "oil_drops.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="seasonal">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="seasonal">
+          <include src="./html/_simple-article.html" locals='{
         "images": "syrup",
         "title": "Maple Syrup",
         "desc": "Maple Syrup",
         "text": "Naturally sweet, rich in flavor, perfect for autumn mornings.",
         "link": "maple_syrup.html"
         }'></include>
-      </div>
+        </div>
 
-      <div class="filter__content" data-category="seasonal">
-        <include src="./html/_simple-article.html" locals='{
+        <div class="filter__content" data-category="seasonal">
+          <include src="./html/_simple-article.html" locals='{
         "images": "pumpkin",
         "title": "Spiced Pumpkin Preserve",
         "desc": "Spiced Pumpkin Preserve",
         "text": "Seasonally spiced, richly flavored, and warmly comforting.",
         "link": "pumpkin_preserve.html"
         }'></include>
+        </div>
+
       </div>
 
     </div>

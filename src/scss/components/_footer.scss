@@ -2,7 +2,7 @@
 @use "../utils/mixins/" as *;
 
 .footer {
-  padding: 43px 0 31px;
+  padding: rem(43) 0 31px;
   background-color: var(--color-green-900);
 
   &__bottom {
@@ -13,6 +13,16 @@
     p {
       line-height: 1.33;
       letter-spacing: 0;
+    }
+  }
+
+  .logo {
+    margin-right: 16px;
+  }
+
+  @include media(mobile-l) {
+    .logo {
+      margin-right: 0;
     }
   }
 }

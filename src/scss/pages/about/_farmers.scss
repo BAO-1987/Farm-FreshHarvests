@@ -41,4 +41,30 @@
       aspect-ratio: 1/1;
     }
   }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      padding: 24px;
+
+      &:last-child {
+        grid-column: 2 span;
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &:last-child {
+        grid-column: auto;
+      }
+    }
+  }
 }

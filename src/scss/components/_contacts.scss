@@ -2,6 +2,8 @@
 @use "../utils/mixins/" as *;
 
 .contacts {
+  padding: rem(86) 0;
+
   &__wrapper {
     position: relative;
     display: flex;
@@ -68,11 +70,13 @@
   }
 
   h2 {
+    margin-bottom: rem(48);
     color: var(--color-white);
-    margin-bottom: 48px;
   }
 
   @include media(tablet) {
+    padding-bottom: 40px;
+
     &__wrapper {
       padding: 24px;
     }
@@ -86,6 +90,10 @@
     }
   }
 
+  @include media(mobile-l) {
+    padding-top: 50px;
+  }
+
   @include media(mobile-m) {
     &__form {
       flex-direction: column;
@@ -94,5 +102,9 @@
         max-width: 100%;
       }
     }
+  }
+
+  @include media(mobile-s) {
+    padding-top: 10px;
   }
 }

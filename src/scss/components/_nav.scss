@@ -30,24 +30,15 @@
         margin-right: 15px;
       }
     }
-
-    @include media(tablet) {
-      margin-bottom: 30px;
-    }
   }
 
   &__link {
     color: var(--color-white);
     font-family: var(--font-family-secondary);
-    font-size: var(--fw-400);
     font-size: 18px;
     line-height: 1.33;
     background-color: transparent;
     transition: color 0.3s linear;
-
-    &--sing {
-      color: var(--color-green-900);
-    }
 
     &:hover {
       color: var(--color-green-400);
@@ -71,8 +62,31 @@
     }
 
     #{$root}__item {
-      @include media(mobile-s) {
+      @include media(mobile-m) {
         margin: 0 0 16px 0;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    &--footer {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &--footer {
+      #{$root}__link {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &--footer {
+      #{$root}__list {
+        flex-direction: column;
       }
     }
   }

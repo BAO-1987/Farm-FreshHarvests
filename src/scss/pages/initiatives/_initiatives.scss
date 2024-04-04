@@ -20,6 +20,11 @@
       flex-direction: row-reverse;
       padding-top: rem(86);
     }
+
+    img {
+      overflow: hidden;
+      border-radius: calc(var(--radius-main) * 8);
+    }
   }
 
   &__content {
@@ -30,6 +35,32 @@
       &:first-of-type {
         margin-bottom: 27px;
       }
+    }
+  }
+
+  @include media(tablet) {
+    &__item {
+      flex-direction: column;
+
+      &:not(:last-child) {
+        padding-bottom: 20px;
+      }
+
+      &:last-child {
+        padding-top: 20px;
+      }
+
+      &--reverse {
+        padding-top: 20px;
+      }
+
+      img {
+        aspect-ratio: 12/9;
+      }
+    }
+
+    &__content {
+      max-width: 100%;
     }
   }
 }

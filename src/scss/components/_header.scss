@@ -8,23 +8,15 @@
   padding: 31px 0;
   width: 100%;
   background-color: var(--color-green-900);
-
   transition-property: transform;
   transition-duration: 0.15s;
-
-  &__inner {
-    border-radius: 100px;
-    border: 1px solid var(--color-green-100);
-    padding: 14px 16px;
-    background-color: var(--color-white);
-  }
 
   &.hide {
     transform: translateY(-200%);
   }
 
   @include media(tablet) {
-   padding: 16px 0;
+    padding: 16px 0;
 
     .nav__inner {
       position: fixed;
@@ -46,10 +38,11 @@
     .nav__list {
       z-index: -1;
       flex-direction: column;
-      // margin-right: 0;
     }
 
     .nav__item {
+      margin-bottom: 30px;
+
       &:not(:last-child) {
         margin-right: 0;
       }

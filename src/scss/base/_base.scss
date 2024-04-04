@@ -18,7 +18,7 @@ body {
   color: var(--color-green-900);
   background-color: var(--color-white);
   font-optical-sizing: auto;
-  scroll-padding: calc(var(--header-height) + 60px);
+  scroll-padding: var(--header-height);
 
   &__body {
     min-width: 320px;
@@ -67,7 +67,7 @@ body {
   max-width: 261px;
 
   @include media(tablet-wide) {
-    max-width: 230px;
+    max-width: 220px;
   }
 }
 
@@ -92,8 +92,8 @@ body {
     background-color: var(--color-green-900);
   }
 
-  @include media(tablet-wide) {
-    padding: 10px 0;
+  @include media(tablet) {
     overflow-y: scroll;
+    padding: 10px 0;
   }
 }

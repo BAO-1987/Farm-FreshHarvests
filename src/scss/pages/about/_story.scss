@@ -16,6 +16,9 @@
   }
 
   &__item {
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) * 4);
+
     h3 {
       margin-bottom: 16px;
       font-size: clamp(20px, 1rem + 1.1111vi, 32px);
@@ -28,12 +31,15 @@
       text-align: center;
     }
 
+    img {
+      height: 100%;
+    }
+
     &--colored {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border-radius: calc(var(--radius-main) * 4);
       padding: rem(40) 24px;
       color: var(--color-white);
       background-color: var(--color-green-400);
@@ -43,6 +49,35 @@
   h2 {
     span {
       display: inline;
+    }
+  }
+
+  @include media(tablet) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    &__item {
+      &--colored {
+        padding: 24px;
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      img {
+        width: 100%;
+        object-position: center;
+        aspect-ratio: 12/9;
+      }
     }
   }
 }
