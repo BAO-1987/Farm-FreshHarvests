@@ -1,4 +1,4 @@
-<section class="filter section">
+<section class="filter filter--main" id="catalog">
 
   <div class="container">
 
@@ -76,7 +76,26 @@
         "link": "organic_kale.html"
         }'></include>
       </div>
-        
+
+      <div class="filter__content" data-category="fresh">
+        <include src="./html/_simple-article.html" locals='{
+        "images": "tomatoes",
+        "title": "Juicy Heirloom Tomatoes",
+        "desc": "Juicy Heirloom Tomatoes",
+        "text": "Richly flavorful, sun-ripened, perfect for any culinary dish.",
+        "link": "juicy_tomatoes.html"
+        }'></include>
+      </div>
+
+      <div class="filter__content" data-category="dairy">
+        <include src="./html/_simple-article.html" locals='{
+        "images": "butter",
+        "title": "Creamy Farmhouse Butter",
+        "desc": "Creamy Farmhouse Butter",
+        "text": "Pure, rich taste from grass-fed cows, churned to perfection.",
+        "link": "creamy_butter.html"
+        }'></include>
+      </div>
 
       <div class="filter__content" data-category="dairy">
         <include src="./html/_simple-article.html" locals='{
@@ -85,6 +104,16 @@
         "desc": "Omega-Rich Free-Range Eggs",
         "text": "Delicious, nutrient-rich eggs from happily free-roaming chickens.",
         "link": "range_eggs.html"
+        }'></include>
+      </div>
+
+      <div class="filter__content" data-category="pantry">
+        <include src="./html/_simple-article.html" locals='{
+        "images": "wheat",
+        "title": "Stone-Ground Whole Wheat Flour",
+        "desc": "Stone-Ground Whole Wheat Flour",
+        "text": "Perfect for wholesome, rustic baking experiences.",
+        "link": "wheat_flour.html"
         }'></include>
       </div>
 
@@ -100,6 +129,16 @@
 
       <div class="filter__content" data-category="beverages">
         <include src="./html/_simple-article.html" locals='{
+        "images": "coffee",
+        "title": "Cold Brew Coffee Concentrate",
+        "desc": "Cold Brew Coffee Concentrate",
+        "text": "Smooth, richly flavored, sustainably sourced for perfection.",
+        "link": "coffee.html"
+        }'></include>
+      </div>
+
+      <div class="filter__content" data-category="beverages">
+        <include src="./html/_simple-article.html" locals='{
         "images": "tea",
         "title": "Organic Green Tea",
         "desc": "Organic Green Tea",
@@ -110,11 +149,31 @@
 
       <div class="filter__content" data-category="sweet">
         <include src="./html/_simple-article.html" locals='{
+        "images": "chocolate",
+        "title": "Dark Chocolate Quinoa Bars",
+        "desc": "Dark Chocolate Quinoa Bars",
+        "text": "Deliciously crunchy, bittersweet with a cocoa-rich hit.",
+        "link": "dark_chocolate.html"
+        }'></include>
+      </div>
+
+      <div class="filter__content" data-category="sweet">
+        <include src="./html/_simple-article.html" locals='{
         "images": "honey",
         "title": "Wildflower Honey",
         "desc": "Wildflower Honey",
         "text": "Naturally sweet, floral notes, harvested with care.",
         "link": "honey.html"
+        }'></include>
+      </div>
+
+      <div class="filter__content" data-category="health">
+        <include src="./html/_simple-article.html" locals='{
+        "images": "spirulina",
+        "title": "Spirulina Powder",
+        "desc": "Spirulina Powder",
+        "text": "A protein-packed superfood for an energizing boost.",
+        "link": "spirulina_powder.html"
         }'></include>
       </div>
 
@@ -149,8 +208,6 @@
       </div>
 
     </div>
-
-    <a class="btn btn--more" href="products.html#catalog">Show More</a>
 
   </div>
 

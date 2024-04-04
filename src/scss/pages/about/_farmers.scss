@@ -3,7 +3,7 @@
 
 .farmers {
   &__content {
-    margin: 0 auto rem(48);
+    margin: 0 auto rem(80);
     width: 100%;
     max-width: 745px;
     text-align: center;
@@ -16,19 +16,18 @@
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     border-radius: calc(var(--radius-main) * 3);
-    padding: rem(56) 32px;
+    padding: rem(56) 35px;
     box-shadow: 18px 15px 35px 0 rgba(0, 0, 0, 0.09);
     text-align: center;
     background-color: var(--color-white);
 
     h3 {
-      margin-bottom: 16px;
+      margin-bottom: 27px;
       font-size: clamp(20px, 1rem + 1.1111vi, 32px);
+      line-height: 1.1;
     }
 
     p {
@@ -39,6 +38,7 @@
     img {
       margin-bottom: 24px;
       border-radius: 50%;
+      aspect-ratio: 1/1;
     }
   }
 }

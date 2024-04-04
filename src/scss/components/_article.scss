@@ -20,13 +20,16 @@
   h3 {
     margin-bottom: 16px;
     width: 100%;
+    min-height: 63px;
+    display: flex;
+    align-items: center;
     max-width: 245px;
     font-size: clamp(20px, 1.0833rem + 0.7407vi, 28px);
     line-height: 1.1;
   }
 
   p {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
     font-size: 16px;
   }
 
@@ -34,6 +37,7 @@
     margin-top: auto;
     width: fit-content;
     font-size: 16px;
+    letter-spacing: 0.025em;
     text-decoration: underline;
     text-decoration-color: transparent;
     color: var(--color-green-400);

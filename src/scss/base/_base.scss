@@ -18,7 +18,7 @@ body {
   color: var(--color-green-900);
   background-color: var(--color-white);
   font-optical-sizing: auto;
-  // scroll-padding: calc(var(--header-height) + 60px);
+  scroll-padding: calc(var(--header-height) + 60px);
 
   &__body {
     min-width: 320px;
@@ -35,7 +35,7 @@ body {
   padding: rem(86) 0;
 
   @include media(tablet) {
-     padding: rem(40) 0;
+    padding: rem(40) 0;
   }
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 .main {
-    padding-top: var(--header-height);
+  padding-top: calc(var(--header-height) - 1px);
 }
 
 .logo {
@@ -66,13 +66,12 @@ body {
   width: 100%;
   max-width: 261px;
 
-  // @include media(tablet-wide) {
-  //   max-width: 230px;
-  // }
+  @include media(tablet-wide) {
+    max-width: 230px;
+  }
 }
 
 .is-scrolling {
-  overflow-y: scroll;
   scrollbar-color: var(--color-green-900) var(--color-white);
   scrollbar-width: thin;
 
@@ -93,7 +92,8 @@ body {
     background-color: var(--color-green-900);
   }
 
-  @include media(tablet) {
-    padding-bottom: 16px;
+  @include media(tablet-wide) {
+    padding: 10px 0;
+    overflow-y: scroll;
   }
 }

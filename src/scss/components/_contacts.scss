@@ -7,13 +7,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 106px;
+    padding: 0 rem(106);
     min-height: 500px;
     border-radius: calc(var(--radius-main) * 8);
     background-color: var(--color-green-900);
   }
 
   &__content {
+    z-index: 2;
     width: 100%;
     max-width: 715px;
   }
@@ -22,16 +23,13 @@
     position: absolute;
     pointer-events: none;
     bottom: 0;
-    right: -91px;
-    overflow: hidden;
-    border-radius: calc(var(--radius-main) * 3);
+    right: 70px;
   }
 
   &__inner {
     position: absolute;
     right: 0;
     bottom: 0;
-    border: 2px solid var(--color-grey-10);
     border-radius: calc(var(--radius-main) * 3);
     padding: 24px;
     width: 100%;
@@ -59,8 +57,8 @@
       padding: 16 24px;
       width: 100%;
       max-width: 100%;
-      background-color: rgba(255, 255, 255, 0.08);
       color: var(--color-white);
+      background-color: rgba(255, 255, 255, 0.08);
 
       &::placeholder {
         line-height: 1.33;
@@ -72,5 +70,29 @@
   h2 {
     color: var(--color-white);
     margin-bottom: 48px;
+  }
+
+  @include media(tablet) {
+    &__wrapper {
+      padding: 24px;
+    }
+
+    img {
+      right: 0;
+    }
+
+    input {
+      background-color: var(--color-green-400);
+    }
+  }
+
+  @include media(mobile-m) {
+    &__form {
+      flex-direction: column;
+
+      .btn {
+        max-width: 100%;
+      }
+    }
   }
 }

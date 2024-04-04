@@ -24,13 +24,13 @@ h2 {
 
 h3 {
   font-size: clamp(18px, 1.0833rem + 0.7407vi, 18px);
-  line-height: 1;
+  // line-height: 1;
 }
 
 .subtext,
 p {
   font-size: 18px;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.026em;
 }
 
 .subtext {

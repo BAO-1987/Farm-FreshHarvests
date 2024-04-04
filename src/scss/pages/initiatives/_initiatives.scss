@@ -12,6 +12,10 @@
       padding-bottom: rem(86);
     }
 
+    &:last-child {
+      padding-top: rem(86);
+    }
+
     &--reverse {
       flex-direction: row-reverse;
       padding-top: rem(86);
@@ -24,7 +28,7 @@
 
     p {
       &:first-of-type {
-        margin-bottom: 32px;
+        margin-bottom: 27px;
       }
     }
   }

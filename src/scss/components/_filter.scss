@@ -2,6 +2,8 @@
 @use "../utils/mixins/" as *;
 
 .filter {
+  $root: &;
+
   &__desc {
     margin: 0 auto rem(49);
     width: 100%;
@@ -13,10 +15,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: rem(47);
+    margin: 0 auto rem(48);
     border-radius: 100px;
     width: 100%;
-    max-width: 1179px;
+    max-width: 1180px;
     background-color: rgba(4, 58, 42, 0.12);
   }
 
@@ -27,7 +29,18 @@
     gap: 24px;
   }
 
-  h2 {
-    margin-bottom: 24px;
+  &--main {
+    padding: rem(85) 0;
+
+    #{$root}__grid {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media(tablet-wide) {
+    &__nav {
+      max-width: 100%;
+      justify-content: start;
+    }
   }
 }

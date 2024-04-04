@@ -1,14 +1,14 @@
-const filterList = document.querySelector(".filter__nav");
-const filterButtons = filterList.querySelectorAll(".btn--filter");
-const conferences = document.querySelectorAll(".filter__content");
+const filterList = document?.querySelector(".filter__nav");
+const filterButtons = filterList?.querySelectorAll(".btn--filter");
+const conferences = document?.querySelectorAll(".filter__content");
 
 let conferenceIndex = 0;
 
-conferences.forEach((conference) => {
+conferences?.forEach((conference) => {
   conference.style.viewTransitionName = `conf-${++conferenceIndex}`;
 });
 
-filterButtons.forEach((button) => {
+filterButtons?.forEach((button) => {
   button.addEventListener("click", (e) => {
     let confCategory = e.target.getAttribute("data-filter");
 
@@ -17,7 +17,7 @@ filterButtons.forEach((button) => {
       filterEvents(confCategory);
     }
 
-    document.startViewTransition(() => {
+    document?.startViewTransition(() => {
       updateActiveButton(e.target);
       filterEvents(confCategory);
     });
@@ -31,10 +31,9 @@ function updateActiveButton(newButton) {
 
 function filterEvents(filter) {
   conferences.forEach((conference) => {
-    // get each conferences category
     let eventCategory = conference.getAttribute("data-category");
 
-    // check if that category matches with the filter
+    
     if (filter === "all" || filter === eventCategory) {
       conference.removeAttribute("hidden");
     } else {
