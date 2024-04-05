@@ -99,6 +99,16 @@
     }
   }
 
+  &--policy {
+    #{$root}__wrapper {
+      min-height: 400px;
+
+      h1 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   @include media(tablet-wide) {
     &__image {
       margin-right: 60px;
@@ -106,7 +116,6 @@
   }
 
   @include media(tablet) {
-
     &__wrapper {
       min-height: 350px;
       padding: 0;

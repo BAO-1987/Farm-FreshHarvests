@@ -16,8 +16,7 @@
 
   h2 {
     margin-bottom: 24px;
-    font-size: clamp(18px, 0.875rem + 1.1111vi, 30px);
-    line-height: 1.33;
+    font-size: clamp(24px, 1rem + 2.2222vi, 48px);
   }
 
   ul {
@@ -41,7 +40,6 @@
 
   p {
     line-height: 1.2;
-    opacity: 1;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -54,10 +52,6 @@
   }
 
   @include media(mobile-l) {
-    h1 {
-      margin-bottom: 30px;
-    }
-
     &__content {
       &:not(:last-child) {
         margin-bottom: 24px;

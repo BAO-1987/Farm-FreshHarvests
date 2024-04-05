@@ -27,13 +27,17 @@
     background-color: var(--color-white);
   }
 
+  &.formsapp-button {
+    margin: 0;
+    font-family: var(--font-family-primary) !important;
+  }
+
   &--reverse {
     color: var(--color-green-900);
     background-color: var(--color-white);
 
     &:hover,
     &:focus {
-      border-color: var(--color-green-900);
       color: var(--color-white);
       background-color: var(--color-green-400);
     }
@@ -41,11 +45,18 @@
 
   &--filter {
     padding: 11px 23px;
-    color: var(--color-green-900);
     font-size: 16px;
     line-height: 1.5;
-    background-color: transparent;
     white-space: nowrap;
+    color: var(--color-green-900);
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      color: var(--color-white);
+      background-color: var(--color-green-400);
+    }
 
     &.active {
       border-color: transparent;
@@ -83,21 +94,4 @@
       background-color: var(--color-white) !important;
     }
   }
-
-  &.formsapp-button {
-    margin: 0;
-    font-family: var(--font-family-primary) !important;
-  }
 }
-
-// .btn-reset {
-//   border-radius: 0 !important;
-//   margin-bottom: 0 !important;
-//   padding: 0 !important;
-//   font-family: var(--font-family-primary) !important;
-//   font-weight: var(--fw-400) !important;
-//   font-size: clamp(18px, 1rem + 0.5556vi, 24px) !important;
-//   line-height: 1.25 !important;
-//   color: var(--color-green-900) !important;
-//   background-color: transparent !important;
-// }

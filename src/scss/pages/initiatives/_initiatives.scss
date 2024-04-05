@@ -8,6 +8,11 @@
     justify-content: space-between;
     gap: 24px;
 
+    img {
+      overflow: hidden;
+      border-radius: calc(var(--radius-main) * 8);
+    }
+
     &:not(:last-child) {
       padding-bottom: rem(86);
     }
@@ -19,11 +24,6 @@
     &--reverse {
       flex-direction: row-reverse;
       padding-top: rem(86);
-    }
-
-    img {
-      overflow: hidden;
-      border-radius: calc(var(--radius-main) * 8);
     }
   }
 
@@ -42,6 +42,10 @@
     &__item {
       flex-direction: column;
 
+      img {
+        aspect-ratio: 12/9;
+      }
+
       &:not(:last-child) {
         padding-bottom: 20px;
       }
@@ -52,10 +56,6 @@
 
       &--reverse {
         padding-top: 20px;
-      }
-
-      img {
-        aspect-ratio: 12/9;
       }
     }
 

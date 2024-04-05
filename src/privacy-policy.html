@@ -6,8 +6,14 @@
   <div class="site-container">
     <include src="./html/_header.html" locals='{"page": ""}'></include>
 
-    <main class="main main--news">
-        <include src="./html/policy/_privacy-policy.html"></include>
+    <main class="main">
+
+      <include src="./html/policy/_hero.html" locals='{
+        "bgImage":"./images/hero/policy.jpg",
+        "titleHero": "Privacy Policy"
+        }'></include>
+
+      <include src="./html/policy/_privacy-policy.html"></include>
 
     </main>
 
