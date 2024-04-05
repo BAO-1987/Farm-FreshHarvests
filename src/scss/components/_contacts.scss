@@ -9,9 +9,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: calc(var(--radius-main) * 8);
     padding: 0 rem(106);
     min-height: 500px;
-    border-radius: calc(var(--radius-main) * 8);
     background-color: var(--color-green-900);
   }
 
@@ -23,9 +23,9 @@
 
   img {
     position: absolute;
-    pointer-events: none;
-    bottom: 0;
     right: 70px;
+    bottom: 0;
+    pointer-events: none;
   }
 
   &__inner {
@@ -104,7 +104,7 @@
     }
   }
 
-  @include media(mobile-s) {
+  @include media(mobile-sm) {
     padding-top: 10px;
   }
 }
