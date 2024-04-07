@@ -38,41 +38,19 @@
   }
 
   @include media(tablet-wide) {
-    &__wrapper {
-      display: flex;
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     &__nav {
-      position: sticky;
-      top: 20px;
-      border-radius: 50px;
-      flex-direction: column;
-      max-width: 180px;
-      height: fit-content;
-      margin-right: 35px;
-    }
-
-    &__grid {
-      grid-template-columns: repeat(3, 1fr);
+      max-width: 100%;
+      justify-content: flex-start;
     }
   }
 
   @include media(tablet) {
-    &__wrapper {
-      display: block;
-    }
-
     &__nav {
-      display: flex;
       margin-bottom: 30px;
-      position: relative;
-      top: 0;
-      border-radius: 50px;
-      flex-direction: row;
-      justify-content: flex-start;
-      max-width: 100%;
-      height: fit-content;
-      margin-right: 0;
     }
 
     &__grid {

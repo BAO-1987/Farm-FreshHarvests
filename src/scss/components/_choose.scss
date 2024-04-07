@@ -115,7 +115,6 @@
   @include media(tablet) {
     &__wrapper {
       flex-direction: column;
-      align-items: center;
       justify-content: center;
     }
 
@@ -125,13 +124,14 @@
 
     &__list {
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 22px;
     }
 
     &__image {
       img {
+        width: 100%;
         object-position: center;
-        aspect-ratio: 12/9;
+        aspect-ratio: 16/9;
       }
     }
 

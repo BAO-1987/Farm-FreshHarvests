@@ -43,7 +43,8 @@
       flex-direction: column;
 
       img {
-        aspect-ratio: 12/9;
+        width: 100%;
+        aspect-ratio: 16/9;
       }
 
       &:not(:last-child) {

@@ -68,10 +68,7 @@
     }
   }
 
-  h1 {
-    margin-bottom: 24px;
-  }
-
+  h1,
   p {
     margin-bottom: 24px;
   }
@@ -93,7 +90,8 @@
     }
 
     img {
-      aspect-ratio: 12/9;
+      width: 100%;
+      aspect-ratio: 16/9;
     }
   }
 }
